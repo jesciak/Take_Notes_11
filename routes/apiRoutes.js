@@ -2,7 +2,7 @@
 const fs= require('fs');
 const util = require('util');
 const path= require('path');
-const notes= require('express').Router();
+const router= require('express').Router();
 
 const readFromFile= util.promisify(fs.readFile);
 const writeToFile= util.promisify(fs.writeFile);
@@ -45,4 +45,4 @@ if (req.body){
 }
 });
 }
-module.exports= notes;
+module.exports= router;
