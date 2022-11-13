@@ -32,5 +32,5 @@ app.use('/', htmlRoutes);
 // app.post()
 
 app.listen(PORT, function(){
-    console.log("Now Listening");
+    console.log(`Now Listening on PORT: ${PORT}`);
 });

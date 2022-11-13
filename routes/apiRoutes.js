@@ -22,27 +22,47 @@ const readAndAppend= (content,file)=> {
 
 
 // const api = require('')
-//GET  Route for note
+//GET all notes
 router.get('/notes', (req,res)=>{
- readFromFile('./db/db.json').then((data)=>res.json(JSON.parse(data)));
-    });
+   notesData().then((notes)=>{
+    return res.json(notes);
+
+    })
+    .catch((err)=>res.status(500).json(err));
+});
+//  readFromFile('./db/db.json').then((data)=>res.json(JSON.parse(data)));
+//     });
 
 
 //POST new note
 router.post('/notes,', (req, res)=>{
-    console.log(req);
-    console.log(req.body);
-    const { title, text} =req.body;
-if (req.body){
-    const newNote ={
-        title,
-        text,
-    };
-    readAndAppend(newNote, './db/db.json');
-    res.json(`Note added successfully!`);
-}else{
-    res.error(`Error in adding note`);
-}
+newNote(req.body)
+.then((note)=>res.json(note))
+.catch((err)=>res.status(500).json(err))
+
+//     console.log(req);
+//     console.log(req.body);
+//     const { title, text} =req.body;
+// if (req.body){
+//     const newNote ={
+//         title,
+//         text,
+//     };
+//     readAndAppend(newNote, './db/db.json');
+//     res.json(`Note added successfully!`);
+// }else{
+//     res.error(`Error in adding note`);
+// }
+// });
+// }
+
+router.delete('/notes/:id', (req, res)=>{
+    deleteNote(req.params.id)
+    .then(()=> res.json({ status: true}))
+    .catch((err)=> res.status(500).json(err))
 });
-}
+});
+}   
+// const getNotes
+                    
 module.exports= router;
