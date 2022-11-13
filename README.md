@@ -1,4 +1,5 @@
 # Take_Notes_11
+ ![MIT License](https://img.shields.io/badge/license-MIT-brightgreen)
 ## Table of Contents 
 
 - [Overview](#overview)
@@ -36,20 +37,15 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 A note taking application for writing a saving notes using Express.js back end and will save and retrieve note data from a JSON file.
 ## Installation
 
-This application 
+NPM Install Express.js and UUID. Create a local database to store and retrieve data using a db.json file. Deploy site to Heroku. 
 
 ## Usage
 
 
- ![screenshot](./assets/images/)
- <br>
-
-![screenshot](./assets/images/)
-
+ ![screenshot](./images/Untitled_%20Nov%2013%2C%202022%2012_26%20AM.gif)
+ 
 ## License
-
-   ![MIT License](https://img.shields.io/badge/license-MIT-brightgreen)
-      MIT License<br>
+MIT License
   http://choosealicense.com/licenses/mit/<br>
 
 ## Contributors
@@ -59,5 +55,5 @@ This application
 ## Links
 - [Github Repo](https://github.com/jesciak/Take_Notes_11.git)
 
- - [Video Tutorial Link](https://drive.google.com/file/d/1YvES0cp4gAZtGlNxbmWV1edxjEvfT7wf/view)
+- [Site Deployed on Heroku](https://take-on-notes.herokuapp.com/notes)
 
